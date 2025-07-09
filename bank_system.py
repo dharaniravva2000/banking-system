@@ -10,6 +10,8 @@ class BankSystem(object):
         self.accounts_list = []
         self.admins_list = []
         self.load_bank_data()
+	if not self.admins_list:
+          self.load_default_customers()
     
     def load_bank_data(self, filename="bank_data.json"):
         filename = filename 
